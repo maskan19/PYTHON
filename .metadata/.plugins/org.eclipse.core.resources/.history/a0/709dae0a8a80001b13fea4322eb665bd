@@ -1,0 +1,11 @@
+# 가위바위보 게임
+import random
+
+rsp = ["가위", "바위", "보"]
+
+user = input("가위 바위 보!")
+
+print("com : ",rsp[random.randint(1, 3)], "user : ", user)
+if user in rsp
+    print("비겼습니다.")
+    

@@ -1,0 +1,6 @@
+s=0;
+
+for a in range(10):
+    s+=a
+    
+print(s)

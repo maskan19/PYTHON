@@ -1,0 +1,5 @@
+# 가위바위보 게임
+import random
+
+rsp = random.randint(1, 3)
+print rsp

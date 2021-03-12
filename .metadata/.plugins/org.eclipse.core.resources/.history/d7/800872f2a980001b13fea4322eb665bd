@@ -1,0 +1,14 @@
+# 가위바위보 게임
+import random
+
+rsp = ["가위", "바위", "보"]
+com = rsp[random.randint(1, 3)]
+user = input("가위 바위 보!")
+
+print("com : ",com, " user : ", user)
+if user == com:
+        print("비겼습니다.")
+elif (rsp.index(user)-com==1 or rsp.index(user)-com==-2):
+        print("이겼습니다.")
+else
+        print("졌습니다.")
