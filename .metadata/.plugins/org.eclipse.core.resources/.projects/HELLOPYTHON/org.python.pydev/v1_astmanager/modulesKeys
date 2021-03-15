@@ -3,6 +3,8 @@ day01.__init__|D:\workspace_python\HELLOPYTHON\day01|^
 day01.myarr|D:\workspace_python\HELLOPYTHON\day01\myarr.py
 day01.myarr02|D:\workspace_python\HELLOPYTHON\day01\myarr02.py
 day01.myarr03|D:\workspace_python\HELLOPYTHON\day01\myarr03.py
+day01.myarr04|D:\workspace_python\HELLOPYTHON\day01\myarr04.py
+day01.myarr06|D:\workspace_python\HELLOPYTHON\day01\myarr06.py
 day01.myfor01|D:\workspace_python\HELLOPYTHON\day01\myfor01.py
 day01.myhello|D:\workspace_python\HELLOPYTHON\day01\myhello.py
 day01.myholl|D:\workspace_python\HELLOPYTHON\day01\myholl.py
@@ -25,6 +27,7 @@ day02.myoop02|D:\workspace_python\HELLOPYTHON\day02\myoop02.py
 day03.__init__|D:\workspace_python\HELLOPYTHON\day03|^
 day03.myqt01|D:\workspace_python\HELLOPYTHON\day03\myqt01.py
 day03.myqt02|D:\workspace_python\HELLOPYTHON\day03\myqt02.py
+day04.__init__|D:\workspace_python\HELLOPYTHON\day04|^
 day04.myqt03|D:\workspace_python\HELLOPYTHON\day04\myqt03.py
 day04.myqt04|D:\workspace_python\HELLOPYTHON\day04\myqt04.py
 day04.myqt05|D:\workspace_python\HELLOPYTHON\day04\myqt05.py
@@ -33,4 +36,6 @@ day04.myqt07|D:\workspace_python\HELLOPYTHON\day04\myqt07.py
 day04.myqt08|D:\workspace_python\HELLOPYTHON\day04\myqt08.py
 day04.myqt09|D:\workspace_python\HELLOPYTHON\day04\myqt09.py
 day04.myqt09_1|D:\workspace_python\HELLOPYTHON\day04\myqt09_1.py
+day05.__init__|D:\workspace_python\HELLOPYTHON\day05|^
+day05.myomok|D:\workspace_python\HELLOPYTHON\day05\myomok.py
 day05.myqt01|D:\workspace_python\HELLOPYTHON\day05\myqt01.py
