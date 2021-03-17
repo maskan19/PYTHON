@@ -6,7 +6,7 @@ from anaconda_navigator.utils.launch import console
 
 # UI파일 연결
 # 단, UI파일은 Python 코드 파일과 같은 디렉토리에 위치해야한다.
-form_class = uic.loadUiType("myqt01.ui")[0]
+form_class = uic.loadUiType("myomok.ui")[0]
 
 
 # 화면을 띄우는데 사용되는 Class 선언
@@ -15,21 +15,23 @@ class MyWindow(QMainWindow, form_class):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
+        self.pbreset.clicked.connect(self.myreset)
         self.arr2D = [
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0,  0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0,  0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0,  0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0,  0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0,  0, 0, 0, 0, 0],
             
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            [0, 0, 0, 0, 0,  0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0,  0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0,  0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0,  0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0,  0, 0, 0, 0, 0]
             ]
         self.arr2pb = []
         self.turn = 0
+        self.flag_ing =True 
         
         for i in range(10):
             line = []
@@ -45,6 +47,14 @@ class MyWindow(QMainWindow, form_class):
             self.arr2pb.append(line)
         self.myrender()
              
+    def myreset(self):
+        for i in range(10):
+            for j in range(10):
+                self.arr2D[i][j]=0
+        self.flag_ing = True
+        self.turn = 0
+        self.myrender()
+        
     def myrender(self):
          for i in range(10):
             for j in range(10):
@@ -58,6 +68,9 @@ class MyWindow(QMainWindow, form_class):
         # self.arr2pb[0][0].setIcon(QtGui.QIcon("1.png"))
         # self.pb.setIcon(QtGui.QIcon("1.png"))
     def myclick(self):
+        if not self.flag_ing:
+            return
+        
         att = self.sender().toolTip().split(",")
         if self.arr2D[int(att[0])][int(att[1])] > 0:
             return
@@ -82,12 +95,11 @@ class MyWindow(QMainWindow, form_class):
 
         if up + dw == 4 or ul + dr == 4 or le + ri == 4 or ur + dl == 4:
             print(int__wb)
-            if int__wb==2:
+            if int__wb == 2:
                 QMessageBox.information(self, "GAME OVER", "흑돌이 승리했습니다")
             else:
                 QMessageBox.information(self, "GAME OVER", "흰돌이 승리했습니다")
-                
-        
+            self.flag_ing = False
 
     def getUp(self, i, j, int__wb):
         cnt = 0

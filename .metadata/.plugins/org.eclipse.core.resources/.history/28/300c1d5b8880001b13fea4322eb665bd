@@ -1,6 +1,0 @@
-import random
-com = ""
-mine = input(" 홀/짝을 선택하시오")
-
-rnd = random.random()
-
