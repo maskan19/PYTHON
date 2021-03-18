@@ -18,7 +18,7 @@ sql = "insert into stock(s_code,s_name,s_price, in_date) values (%s, %s, %s, %s)
 # cnt = curs.execute(sql, ('김다라', '칡소', '서울'))
 # print(cnt)
 
-now = datetime.datetime.now().strftime('%Y%m%d:%H%M')
+now = datetime.datetime.now().strftime('%Y%m%d.%H%M')
 # print(now) 
 
 # anacoda때문에 따로 설치할 필요가 없다
@@ -33,3 +33,4 @@ for info in soup.select('.tbody'):
         s_price = info.dd.span.text.replace(",", "")
         curs.execute(sql, (s_code, s_name, s_price, now))
 conn.commit()
+conn.close()
