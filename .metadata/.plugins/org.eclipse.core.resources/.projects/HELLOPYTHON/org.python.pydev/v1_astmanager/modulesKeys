@@ -62,5 +62,14 @@ day08.mygraph01|D:\workspace_python\HELLOPYTHON\day08\mygraph01.py
 day08.myselenium01|D:\workspace_python\HELLOPYTHON\day08\myselenium01.py
 day08.myselenium02|D:\workspace_python\HELLOPYTHON\day08\myselenium02.py
 day08.mysleep01|D:\workspace_python\HELLOPYTHON\day08\mysleep01.py
+day09.__init__|D:\workspace_python\HELLOPYTHON\day09|^
+day09.myarr|D:\workspace_python\HELLOPYTHON\day09\myarr.py
+day09.mynumpy01|D:\workspace_python\HELLOPYTHON\day09\mynumpy01.py
+day09.mynumpy02|D:\workspace_python\HELLOPYTHON\day09\mynumpy02.py
+day09.mynumpy03|D:\workspace_python\HELLOPYTHON\day09\mynumpy03.py
+day09.mystockgraph01|D:\workspace_python\HELLOPYTHON\day09\mystockgraph01.py
+day09.mystockgraph02|D:\workspace_python\HELLOPYTHON\day09\mystockgraph02.py
+day09.mystockgraph03|D:\workspace_python\HELLOPYTHON\day09\mystockgraph03.py
 programmers.__init__|D:\workspace_python\HELLOPYTHON\programmers|^
+programmers.captcha|D:\workspace_python\HELLOPYTHON\programmers\captcha.py
 programmers.python_ex|D:\workspace_python\HELLOPYTHON\programmers\python_ex.py
