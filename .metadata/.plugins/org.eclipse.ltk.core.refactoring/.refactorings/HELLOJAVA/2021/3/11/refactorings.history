@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename local variable &apos;ph_num&apos; in &apos;day02.Myframe09.Myframe09()&apos; to &apos;phnum&apos;&#x0D;&#x0A;- Original project: &apos;HELLOJAVA&apos;&#x0D;&#x0A;- Original element: &apos;day02.Myframe09.Myframe09().ph_num&apos;&#x0D;&#x0A;- Renamed element: &apos;ph_num&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;ph_num&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;day02{Myframe09.java[Myframe09~Myframe09@ph_num!1100!1118!1107!1112!QString;!0!false" name="phnum" references="true" stamp="1615430073714" version="1.0"/>
-</session>
