@@ -1,0 +1,5 @@
+pip install requests==2.21.0
+pip install Flask==1.0.2
+pip install oauthlib==3.0.1
+pip install pyOpenSSL==19.0.0
+pip install Flask-Login==0.4.1

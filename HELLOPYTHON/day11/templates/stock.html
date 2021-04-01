@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+table {
+	border: 1px solid gray;
+	text-align: center;
+	padding: 20px;
+}
+
+td {
+	padding: 5px;
+}
+</style>
+</head>
+<body>
+	<h1>STOCK</h1>
+	<form  method="post">
+		<select id="stockName" name="s_name" onchange="selectStock()" placeholder="전체">
+			{% for name in set %}
+			<option>{{name}}</option> {% endfor%}
+		</select>
+	</form>
+
+	<table>
+		<tr>
+			<th>종목코드</th>
+			<th>종목명</th>
+			<th>시간</th>
+			<th>주가</th>
+
+		</tr>
+		{% for ml in list %}
+		<tr>
+			<td>{{ml[0]}}</td>
+			<td>{{ml[1]}}</td>
+			<td>20{{ml[3][:2]}}년 {{ml[3][4:6]}}월 {{ml[3][6:8]}}일
+				{{ml[3][9:11]}}시 {{ml[3][11:13]}}분</td>
+			<td>{{ml[2]}}</td>
+		</tr>
+		{% endfor%}
+	</table>
+</body>
+<script type="text/javascript">
+function selectStock(){
+// 	var stockSelect = document.getElementById("stockName");
+// 	console.log(stockSelect);
+	
+	const selectElement = document.getElementById("stockName");
+	console.log(selectElement);
+
+	// text 가져오기
+	var stockName = selectElement.options[document.getElementById("stockName").selectedIndex].text;
+	console.log(stockName);
+
+	// 	selectElement.addEventListener('change', (event) => {
+// 	  const result = document.querySelector('.result');
+// 	  result.textContent = `You like ${event.target.value}`;
+// 	});
+	selectElement.onchange = function(event) {
+		this.form.submit();
+	}
+	
+	
+	// option value 가져오기
+// 	var value = numSelect.options[document.getElementById("stockName").selectedIndex].value;
+// 	console.log(value);
+}
+</script>
+</html>

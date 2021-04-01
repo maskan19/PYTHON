@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style type="text/css">
+table {
+	width: 400px;
+	border-collapse: collapse;
+	text-align: center;
+}
+
+input[type=text] {
+	width: 90%;
+}
+</style>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript">
+	function fn_add() {
+		let sabun = $("#sabun").val();
+		let name = $("#name").val();
+		let dept = $("#dept").val();
+		let mobile = $("#mobile").val();
+
+		let param = {
+			'sabun' : sabun,
+			'name' : name,
+			'dept' : dept,
+			'mobile' : mobile
+		}
+		$.ajax({
+			type : 'POST',
+			url : '/ins.ajax',
+			data : JSON.stringify(param),
+			dataType : 'JSON',
+			contentType : "application/json",
+			success : function(data) {
+				console.log(data)
+				if (data.result == "success") {
+					location.reload()
+				}
+			},
+			error : function(request, status, error) {
+				console.log(error)
+			}
+		})
+	}
+	function fn_mod() {
+		let sabun = $("#sabun").val();
+		let name = $("#name").val();
+		let dept = $("#dept").val();
+		let mobile = $("#mobile").val();
+
+		let param = {
+			'sabun' : sabun,
+			'name' : name,
+			'dept' : dept,
+			'mobile' : mobile
+		}
+		$.ajax({
+			type : 'POST',
+			url : '/upd.ajax',
+			data : JSON.stringify(param),
+			dataType : 'JSON',
+			contentType : "application/json",
+			success : function(data) {
+				console.log(data)
+				if (data.result == "success") {
+					location.reload()
+				}
+			},
+			error : function(request, status, error) {
+				console.log(error)
+			}
+		})
+	}
+	function fn_del() {
+		let sabun = $("#sabun").val();
+		let name = $("#name").val();
+		let dept = $("#dept").val();
+		let mobile = $("#mobile").val();
+
+		let param = {
+			'sabun' : sabun,
+			'name' : name,
+			'dept' : dept,
+			'mobile' : mobile
+		}
+		$.ajax({
+			type : 'POST',
+			url : '/del.ajax',
+			data : JSON.stringify(param),
+			dataType : 'JSON',
+			contentType : "application/json",
+			success : function(data) {
+				console.log(data)
+				if (data.result == "success") {
+					location.reload()
+				}
+			},
+			error : function(request, status, error) {
+				console.log(error)
+			}
+		})
+	}
+	function fn_detail(sabun, name, dept, mobile) {
+		const obj_sabun = document.getElementById("sabun");
+		const obj_name = document.getElementById("name");
+		const obj_dept = document.getElementById("dept");
+		const obj_mobile = document.getElementById("mobile");
+
+		obj_sabun.value = sabun;
+		obj_name.value = name;
+		obj_dept.value = dept;
+		obj_mobile.value = mobile;
+
+	}
+</script>
+<title>EMP</title>
+</head>
+<body>
+	<h1>EMP</h1>
+
+	<table border="1px">
+		<tr>
+			<td>사번</td>
+			<td>이름</td>
+			<td>부서</td>
+			<td>전화번호</td>
+		</tr>
+		{% for e in list %}
+		<tr>
+			<td><a href="javascript:fn_detail('{{e.sabun}}','{{e.name}}','{{e.dept}}','{{e.mobile}}')">{{e.sabun}}</a></td>
+			<td>{{e.name}}</td>
+			<td>{{e.dept}}</td>
+			<td>{{e.mobile}}</td>
+		</tr>
+		{% endfor%}
+	</table>
+	<br>
+	<br>
+
+	<table border="1px">
+		<tr>
+			<td>사번 :</td>
+			<td colspan="2"><input type="text" id="sabun"></td>
+		</tr>
+		<tr>
+			<td>이름 :</td>
+			<td colspan="2"><input type="text" id="name"></td>
+		</tr>
+		<tr>
+			<td>부서 :</td>
+			<td colspan="2"><input type="text" id="dept"></td>
+		<tr>
+			<td>전화번호 :</td>
+			<td colspan="2"><input type="text" id="mobile"></td>
+		</tr>
+		<tr>
+			<td colspan="3">
+			<input type="submit" value="추가" onclick = "fn_add()"> 
+			<input type="submit" value="수정" onclick = "fn_mod()"> 
+			<input type="submit" value="삭제" onclick = "fn_del()">
+			</td>
+		</tr>
+	</table>
+
+
+</body>
+</html>
